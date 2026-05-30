@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kata Kata Gradient</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+
+            background: linear-gradient(-45deg,
+                    #0f0c29,
+                    #302b63,
+                    #24243e,
+                    #ff00cc);
+
+
+            background-size: 400% 400%;
+            animation: gradientBG 12s ease infinite;
+        }
+
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            text-align: center;
+        }
+
+
+        .text {
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 65px;
+            font-weight: bold;
+            opacity: 0;
+
+            animation: ganti 20s infinite;
+
+            background: linear-gradient(45deg,
+                    #ff00cc,
+                    #ff66ff,
+                    #ffffff,
+                    #ff99dd);
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            text-shadow:
+                0 0 15px #ff00cc,
+                0 0 30px #ff66ff;
+        }
+
+        /* Text 1 */
+
+        .text1 {
+            animation-delay: 0s;
+        }
+
+        /* Text 2 */
+
+        .text2 {
+            animation-delay: 4s;
+        }
+
+        /* Text 3 */
+
+        .text3 {
+            animation-delay: 8s;
+        }
+
+        /* Text 4 */
+
+        .text4 {
+            animation-delay: 12s;
+        }
+
+        /* Text 5 */
+
+        .text5 {
+            animation-delay: 16s;
+        }
+
+        /* Animasi */
+
+        @keyframes ganti {
+
+            0% {
+                opacity: 0;
+                transform:
+                    translate(-50%, -50%) scale(0.7);
+            }
+
+            10% {
+                opacity: 1;
+                transform:
+                    translate(-50%, -50%) scale(1);
+            }
+
+            20% {
+                opacity: 1;
+                transform:
+                    translate(-50%, -50%) scale(1.1);
+            }
+
+            25% {
+                opacity: 0;
+                transform:
+                    translate(-50%, -50%) scale(0.7);
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+
+        .footer {
+            position: absolute;
+            bottom: 30px;
+            color: #ff99dd;
+            font-size: 22px;
+            letter-spacing: 5px;
+
+            text-shadow:
+                0 0 10px #ff00cc,
+                0 0 20px #ff66ff;
+
+            animation: blink 2s infinite;
+        }
+
+        @keyframes blink {
+
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.3;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <audio id="musik" autoplay loop>
+        <source src="laguku.mp3" type="audio/mpeg">
+    </audio>
+
+    <button onclick="document.getElementById('musik').play()" style="
+position:absolute;
+top:20px;
+right:20px;
+padding:10px 20px;
+border:none;
+border-radius:20px;
+background:#ff66cc;
+color:white;
+font-weight:bold;
+cursor:pointer;
+box-shadow:0 0 10px #ff66cc;
+">
+        🎵 Play Music
+    </button>
+
+    <div class="container">
+        <div class="nama-neon">
+            💖 Salsabilatun_Nafisah × Halimur_Rasyid 💖
+        </div>
+
+        <div class="text text1">
+            Hai Ganteng ku!
+        </div>
+        <div class="stars"></div>
+
+        <div class="text text2">
+            Apa Kabar?
+        </div>
+
+        <div class="text text3">
+            Semoga harimu seindah senyummu
+        </div>
+
+        <div class="text text4">
+            Terima kasih sudah bertahan sejauh ini💕
+
+        </div>
+
+        <div class="text text5">
+            Love Youu more sayanggg
+        </div>
+
+    </div>
+
+    <div class="footer">
+        cantik_mu👑
+    </div>
+    <div class="heart">💖</div>
+    <div class="heart heart2">💕</div>
+    <div class="heart heart3">💗</div>
+
+</body>
+
+
+</html>
